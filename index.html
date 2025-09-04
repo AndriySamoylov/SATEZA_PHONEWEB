@@ -1,0 +1,10 @@
+<script>
+    let Device = navigator.userAgent
+    console.log(Device)
+    if (/Mobi|Android|iPhone/i.test(Device)){
+        window.location.href = "PHONEMAINWEB.html"
+    }
+    else{
+        window.location.href = "PCMAINWEB.html"
+    }
+</script>

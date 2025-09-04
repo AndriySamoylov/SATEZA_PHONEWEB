@@ -1,0 +1,402 @@
+<html>
+    <head>
+        <title>SATEZA SYSTEMS</title>
+        <style>
+            body {
+                background-color: rgb(12, 12, 12);
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                transition: all 1s ease;
+            }
+            body.changebg1 {
+                background-color: rgb(73, 73, 73);
+            }
+            ::-webkit-scrollbar {
+                display: none;
+            }
+            .navbar{
+                border-bottom:1px solid rgb(255, 255, 255);
+                justify-content: right;
+                display: flex;
+                margin-top: 10px;
+                background-color:rgb(12, 12, 12) ;
+            }
+            .navbar button {
+                border-style: none;
+                background-color: rgb(12, 12, 12);
+                width: 40px;
+                height: 40px;
+                margin-right: 20px;
+                margin-bottom: 5px;
+            }
+            .dropDownImage {
+                margin: 0px;
+                width: 30px;
+                height: 30px;
+            }
+            .menu {
+                background-color: rgb(214, 214, 214);
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 70%;
+                transform: translateX(-100%);
+                z-index: 9999;
+                transition: all 2s ease;
+            }
+            .menu.out {
+                transform: translateX(0);
+            }
+            .menuDecoration {
+                width: 100%;
+                height: 10%;
+                background-color: rgb(0, 56, 56);
+            }
+            .menuOptions {
+                display: block;
+                justify-content: center;
+                text-align: center;
+                font-size: 18px;
+                letter-spacing: 3px;
+            }
+            .menuOptions p {
+                margin-top: 30px;
+                margin-bottom: 30px;
+                transition: all 0.3s ease;
+            }
+            .menuOptions p:hover {
+                color: rgb(105, 105, 105);
+            }
+            .menuOptionsLine {
+                display: inline-block;
+                background-color: rgb(0, 56, 56);
+                height: 2px;
+                width: 80px;
+                margin: 0 8px;
+            }
+            .intro{
+                display: flex;
+                justify-self: center;
+                width: 100%;
+                height: auto;
+            }
+            .ourProductsSpan {
+                display: inline-block;
+                background-color: rgb(22, 22, 22);
+                color: rgb(255, 255, 255);
+                text-align: center;
+                font-size: 20px;
+                font-weight: bold;
+                padding: 80px 0;
+                width: 100%;
+            }
+            .sectionProducts {
+                margin: 0 0px;
+                width: 100%;
+                background-color: rgb(12, 12, 12);
+                transition: all 1s ease;
+            }
+            .sectionProducts.changebackground {
+                background-color: rgb(73, 73, 73);
+            }
+            .productSabaInfo {
+                color: black;
+                background-color: rgb(184, 184, 184);
+                width: 80%;
+                transform: translateX(200%);
+                opacity: 0%;
+                margin-top: 60px;
+                transition: all 2s ease;
+                justify-self: center;
+                justify-content: center;
+                align-content: center;
+            }
+            .productSabaInfo.slide {
+                transform: translateX(0%);
+                opacity: 100%;
+            }
+            .SIPIC1 {
+                display: flex;
+                justify-self: center;
+                width: 90%;
+                height: auto;
+                margin-bottom: 10px;
+                border-radius: 10px;
+                margin-bottom: 20px;
+            }
+            .productSabaInfoDesc {
+                color: black;
+                background-color: rgb(184, 184, 184);
+                width: 80%;
+                transform: translateX(-200%);
+                opacity: 0%;
+                margin-top: 30px;
+                justify-content: center;
+                align-content: center;
+                justify-self: center;
+                transition: all 2s ease;
+            }
+            .productSabaInfoDesc.slide {
+                transform: translateX(0px);
+                opacity: 100%;
+            }
+            .sabaInfoReleaseImg {
+                display: flex;
+                justify-self: center;
+                width: 90%;
+                height: auto;
+                margin-bottom: 10px;
+                border-radius: 10px;
+                margin-top: 10px;
+            }
+            .exploreSabaInfo {
+                color: black;
+                background-color: rgb(184, 184, 184);
+                width: 80%;
+                opacity: 100%;
+                margin-top: 30px;
+                margin-bottom: 50px;
+                opacity: 0%;
+                justify-content: center;
+                align-content: center;
+                justify-self: center;
+                transition: all 4s ease;
+            }
+            .exploreSabaInfo.appear{
+                opacity: 100%;
+            }
+            .DownloadSabaInfoButton {
+                font: 20px;
+                background-color:rgb(184, 184, 184) ;
+                color: black;
+                border-radius: 17px;
+                width: 150px;
+                height: 36px;
+                border-style: groove;
+                margin-top: 10px;
+                transition: all 0.5s ease;
+            }
+            .DownloadSabaInfoButton:hover {
+                background-color: black;
+                color: white;
+                width: 165px;
+                height: 40px;
+                border: 20px;
+            }
+            .ExploreSabaInfoButton {
+                font: 20px;
+                background-color:rgb(184, 184, 184) ;
+                color: black;
+                border-radius: 17px;
+                width: 150px;
+                height: 36px;
+                border-style: groove;
+                margin-top: 5px;
+                margin-bottom: 10px;
+                transition: all 0.5s ease;
+            }
+            .ExploreSabaInfoButton:hover {
+                background-color: black;
+                color: white;
+                width: 165px;
+                height: 40px;
+                border: 20px;
+            }
+            .ourProjectsSpan {
+                display: inline-block;
+                background-color: rgb(22, 22, 22);
+                color: rgb(255, 255, 255);
+                text-align: center;
+                font-size: 20px;
+                font-weight: bold;
+                padding: 80px 0;
+                width: 100%;
+            }
+            .paragraphProject1 {
+                display: flex;
+                justify-self: center; 
+                align-items: center; 
+                color: white; 
+                font-size: 23px; 
+                font-weight: bold; 
+                margin-top: 80px; 
+                letter-spacing: 1px; 
+                width: 90%;
+                transform: translateX(-130%);
+                opacity: 0%;
+                transition: all 3s ease;
+            }
+            .paragraphProject1.show {
+                transform: translateX(0%);
+                opacity: 100%;
+            }
+            .paragraphProject2 {
+                display: flex;
+                justify-self: center; 
+                align-items: center; 
+                color: white; 
+                font-size: 23px; 
+                font-weight: bold; 
+                margin-top: 50px; 
+                letter-spacing: 1px; 
+                width: 90%;
+                transform: translateX(130%);
+                opacity: 0%;
+                transition: all 3s ease;
+            }
+            .paragraphProject2.show {
+                transform: translateX(0%);
+                opacity: 100%;
+            }
+            .Explore16 {
+                width: 140px;
+                height: 40px;
+                border-radius: 20px;
+                background-color:rgb(22, 22, 22) ;
+                color: white;
+                border-color: white;
+                border-style: groove;
+                transition: all 0.7s ease;
+                font-size: 12px;
+            }
+            .Explore16:hover {
+                width: 150px;
+                height: 44px;
+                border-radius: 22px;
+                background-color:rgb(177, 177, 177) ;
+                color: rgb(22, 22, 22);
+                border-color: rgb(177, 177, 177);
+                border-style: groove;
+                font-size: 13px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <button onclick="DropdownOnCLick()"><img src="menu.png" class="dropDownImage" id="Menu"></button>
+            <section class="menu" id="menu">
+            <section class="menuDecoration"></section>
+            <div class="menuOptions">
+                <p>Products</p>
+                <span class="menuOptionsLine"></span>
+                <p>Projects</p>
+                <span class="menuOptionsLine"></span>
+                <p>About Us</p>
+                <span class="menuOptionsLine"></span>
+                <p>Free money</p>
+            </div>
+            </section>
+        </div>
+        <video class="intro" src="PHONEINTR.mp4" muted autoplay>
+        </video>
+        <span class="ourProductsSpan">
+            Our Products
+        </span>
+        <section class="sectionProducts">
+            <section class="productSabaInfo">
+                <section style="width: 100%; height: 7%; background-color: rgb(0, 56, 56) ;"></section>
+                <p style="font-size: 20px; word-spacing: 3px; display: flex; justify-content: center; margin-bottom: 10px; margin-top: 15px;">SABA INFO V.1.5</p>
+                <img src="SIPIC1.png" class="SIPIC1">
+            </section>
+            <section class="productSabaInfoDesc">
+                <section style="width: 100%; height: 7%; background-color: rgb(58, 2, 2) ;"></section>
+                <img src="SABAV5R.jpg" class="sabaInfoReleaseImg">
+                <div style="display: flex; justify-content: center; align-content: center; margin-left: 35px;">
+                <p style="font-size: 18px; word-spacing: 1px; display: flex; margin-bottom: 10px; margin-top: 18px; margin: 10px; margin-top: 0px; font-weight: bold;">The first saba info version that was released for public</p>
+                </div>
+            </section>
+            <section class="exploreSabaInfo">
+                <section style="width: 100%; height: 7%; background-color: rgb(65, 66, 3) ;"></section>
+                <div style="justify-content: center; align-content: center; display: flex; margin-left: 5px;">
+                    <p style="font-size: 18px; word-spacing: 1px; display: flex; margin-bottom: 10px; margin-top: 18px; margin: 10px; margin-top: 10px; font-weight: bold;">Explore the latest saba info version</p>
+                </div>
+                <div style="display: flex; justify-content: center; align-content: center;  ">
+                    <button class="DownloadSabaInfoButton">Download</button>
+                </div>
+                <div style="display: flex; justify-content: center; align-content: center;  ">
+                    <button class="ExploreSabaInfoButton">Explore</button>
+                </div>
+            </section>
+        </section>
+        <span class="ourProjectsSpan"> Our Projects</span>
+        <section class="ourProjectsSection">
+            <p class="paragraphProject1">Interested what comes after Saba Info Version 1.5?</p>
+            <p class="paragraphProject2">We are working on the future of Saba Info : Saba Info version 1.6</p>
+            <div style="display: flex; justify-content: center; margin-top: 50px; margin-bottom: 80px;">
+                <button class="Explore16">Explore</button>
+            </div>
+            <div style="display: flex; font-size: 10px; color: white; gap: 40px; justify-content: center;">
+                <p>SAMOYLOV</p>
+                <P>TERECHOV</P>
+                <p>ZAKHAROV</p>
+            </div>
+        </section>
+    </body>
+    <script>
+        const menuButton = document.querySelector(".menu");
+        function DropdownOnCLick () {
+            menuButton.classList.toggle("out");
+        };
+        window.addEventListener("scroll" , function() {
+            const productSabaInfoSection = document.querySelector(".productSabaInfo");
+            const positionPSI = productSabaInfoSection.getBoundingClientRect().top
+            const windowHeight = window.innerHeight;
+            if (positionPSI < windowHeight - 20) {
+                productSabaInfoSection.classList.toggle("slide");
+                window.removeEventListener("scroll" , arguments.callee)
+            }
+        });
+        window.addEventListener("scroll" , function() {
+            const productSabaInfoDescriptionSection = document.querySelector(".productSabaInfoDesc");
+            const positionPSID = productSabaInfoDescriptionSection.getBoundingClientRect().top
+            const windowHeight = window.innerHeight
+            if (positionPSID < windowHeight - 20) {
+                productSabaInfoDescriptionSection.classList.toggle("slide");
+                window.removeEventListener("scroll" , arguments.callee)
+            }
+        });
+        window.addEventListener("scroll" , function() {
+            const exploreSabaInfoSection = document.querySelector(".exploreSabaInfo");
+            const positionESI = exploreSabaInfoSection.getBoundingClientRect().top
+            const windowHeight = window.innerHeight
+            if (positionESI < windowHeight -20) {
+                exploreSabaInfoSection.classList.toggle("appear");
+                window.removeEventListener("scroll" , arguments.callee)
+            }
+        });
+        window.addEventListener("scroll" , function() {
+            const body = document.querySelector("body")
+            const PSS = document.querySelector(".sectionProducts")
+            const productSabaInfoDescriptionSection = document.querySelector(".productSabaInfoDesc");
+            const positionPSID = productSabaInfoDescriptionSection.getBoundingClientRect().top
+            const windowHeight = window.innerHeight
+            if (positionPSID < windowHeight - 100) {
+                PSS.classList.toggle("changebackground");
+                body.classList.toggle("changebg1")
+            }
+        });
+        window.addEventListener("scroll" , function() {
+            const body = document.querySelector("body")
+            const PSS = document.querySelector(".sectionProducts")
+            const OPS = document.querySelector(".ourProjectsSpan");
+            const positionPSID = OPS.getBoundingClientRect().top
+            const windowHeight = window.innerHeight
+            if (positionPSID < windowHeight - 10) {
+                PSS.classList.remove("changebackground");
+                body.classList.remove("changebg1")
+            }
+        });
+        window.addEventListener("scroll" , function() {
+            const SEP2 = document.querySelector(".paragraphProject2")
+            const SEP1 = document.querySelector(".paragraphProject1")
+            const SEP2POSITION = SEP2.getBoundingClientRect().top
+            const windowHeight = window.innerHeight
+            if (SEP2POSITION < windowHeight - 10) {
+                SEP1.classList.toggle("show")
+                SEP2.classList.toggle("show")
+                window.removeEventListener("scroll" , arguments.callee)
+            }
+        })
+    </script>
+</html>
